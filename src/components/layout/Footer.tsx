@@ -22,7 +22,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="py-6 border-t border-aqua/30">
+    <footer className="py-6 border-t border-coral/30">
       <div className="container px-4 mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="mb-4 md:mb-0 flex items-center">
@@ -39,7 +39,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={link.name}
-                className="text-coral-light hover:text-coral transition-colors"
+                className="text-coral hover:text-coral-light transition-colors"
               >
                 {link.icon}
               </a>

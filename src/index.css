@@ -61,12 +61,12 @@
   }
 
   .section-heading::before {
-    @apply font-mono text-aqua mr-2;
+    @apply font-mono text-coral mr-2;
     content: "0" counter(section) ".";
   }
 
   .section-heading::after {
-    @apply ml-4 h-px bg-coral-light flex-grow;
+    @apply ml-4 h-px bg-coral flex-grow;
     content: "";
   }
 
@@ -86,7 +86,7 @@
   }
 
   .numbered-list li::before {
-    @apply absolute left-0 text-gold font-mono text-sm;
+    @apply absolute left-0 text-coral font-mono text-sm;
     content: "0" counter(list-item) ".";
   }
 }

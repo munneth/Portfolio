@@ -26,17 +26,24 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				navy: {
-					light: '#172a45',
-					DEFAULT: '#0a192f',
-					dark: '#020c1b',
+					light: '#264653',
+					DEFAULT: '#264653',
+					dark: '#1a2f38',
 				},
 				slate: {
-					light: '#ccd6f6',
-					DEFAULT: '#8892b0',
-					dark: '#495670',
+					light: '#f8f9fa',
+					DEFAULT: '#e9ecef',
+					dark: '#dee2e6',
 				},
 				aqua: {
-					DEFAULT: '#64ffda',
+					DEFAULT: '#2a9d8f',
+				},
+				gold: {
+					DEFAULT: '#e9c46a',
+				},
+				coral: {
+					light: '#f4a261',
+					DEFAULT: '#e76f51',
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',

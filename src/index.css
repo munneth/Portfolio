@@ -7,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 222 47% 11%;
-    --foreground: 214 32% 91%;
+    --background: 197 37% 24%;
+    --foreground: 0 0% 98%;
 
-    --card: 222 47% 11%;
-    --card-foreground: 214 32% 91%;
+    --card: 197 37% 24%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 222 47% 11%;
-    --popover-foreground: 214 32% 91%;
+    --popover: 197 37% 24%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 197 37% 24%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 173 59% 39%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 39 80% 67%;
+    --muted-foreground: 197 37% 34%;
 
-    --accent: 170 100% 69%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 13 76% 61%;
+    --accent-foreground: 197 37% 24%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 170 100% 69%;
+    --border: 173 59% 39%;
+    --input: 173 59% 39%;
+    --ring: 13 76% 61%;
 
     --radius: 0.5rem;
   }
@@ -61,12 +61,12 @@
   }
 
   .section-heading::before {
-    @apply font-mono text-aqua mr-2;
+    @apply font-mono text-coral mr-2;
     content: "0" counter(section) ".";
   }
 
   .section-heading::after {
-    @apply ml-4 h-px bg-slate-dark flex-grow;
+    @apply ml-4 h-px bg-coral flex-grow;
     content: "";
   }
 
@@ -86,7 +86,7 @@
   }
 
   .numbered-list li::before {
-    @apply absolute left-0 text-aqua font-mono text-sm;
+    @apply absolute left-0 text-coral font-mono text-sm;
     content: "0" counter(list-item) ".";
   }
 }

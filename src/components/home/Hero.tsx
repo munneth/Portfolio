@@ -19,7 +19,7 @@ const Hero = () => {
           Munneth.
         </h1>
         <h2 
-          className="text-3xl md:text-5xl lg:text-6xl font-bold text-slate mb-6 opacity-0 animate-fade-in" 
+          className="text-3xl md:text-5xl lg:text-6xl font-bold text-gold mb-6 opacity-0 animate-fade-in" 
           style={{ animationDelay: '300ms' }}
         >
           I build things for the web.
@@ -32,7 +32,7 @@ const Hero = () => {
           Currently focused on building accessible, human-centered products.
         </p>
         <div className="opacity-0 animate-fade-in" style={{ animationDelay: '500ms' }}>
-          <Button asChild className="bg-transparent text-aqua border border-aqua hover:bg-aqua/10 py-6 px-7 rounded text-base font-mono">
+          <Button asChild className="bg-transparent text-coral border border-coral hover:bg-coral/10 py-6 px-7 rounded text-base font-mono">
             <a href="#contact">Get In Touch</a>
           </Button>
         </div>

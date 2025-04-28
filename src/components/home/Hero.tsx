@@ -16,7 +16,7 @@ const Hero = () => {
           className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-light mb-4 opacity-0 animate-fade-in" 
           style={{ animationDelay: '200ms' }}
         >
-          Your Name.
+          Munneth.
         </h1>
         <h2 
           className="text-3xl md:text-5xl lg:text-6xl font-bold text-slate mb-6 opacity-0 animate-fade-in" 

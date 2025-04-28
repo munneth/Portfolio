@@ -24,7 +24,7 @@ const About = () => {
         <div className="grid md:grid-cols-3 gap-10">
           <div className="col-span-2 space-y-4">
             <p className="text-slate">
-              Hello! My name is Your Name, and I enjoy creating things that live on the internet.
+              Hello! My name is Munneth, and i enjoy creating things that live on the internet.
               My interest in web development started back in 2012 when I decided to try editing custom
               Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!
             </p>

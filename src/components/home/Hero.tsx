@@ -22,7 +22,7 @@ const Hero = () => {
           className="text-3xl md:text-5xl lg:text-6xl font-bold text-gold mb-6 opacity-0 animate-fade-in" 
           style={{ animationDelay: '300ms' }}
         >
-          I build things for the web.
+          I build things for fun!
         </h2>
         <p 
           className="text-slate max-w-xl mb-12 opacity-0 animate-fade-in" 

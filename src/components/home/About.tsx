@@ -2,18 +2,19 @@
 import React from "react";
 
 const skills = [
-  "JavaScript (ES6+)",
+  "C++ 20",
+  "Python",
+  "Flask",
   "TypeScript",
   "React",
   "Next.js",
   "Node.js",
-  "Express",
+  "Supabase",
   "MongoDB",
-  "SQL",
-  "AWS",
+  "Google Cloud",
+  "Azure",
   "Docker",
   "Git",
-  "Tailwind CSS",
 ];
 
 const About = () => {
@@ -27,9 +28,9 @@ const About = () => {
               Hello! My name is Munneth, and 
             </p>
             <p className="text-slate">
-              Fast-forward to today, and I've had the privilege of working at an advertising agency, a start-up, 
-              and a student-led design studio. My main focus these days is building accessible, inclusive 
-              products and digital experiences for a variety of clients.
+              Fast-forward to today, I've had the privelage to work in student-orgs, startups, and as a research assistant!.
+              The way technology is always changing is what I love about computer science because it allows me to constantly learn new things.
+              
             </p>
             <p className="text-slate">
               Here are a few technologies I've been working with recently:

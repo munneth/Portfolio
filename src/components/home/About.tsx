@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const skills = [
@@ -52,7 +51,7 @@ const About = () => {
               <div className="aspect-square bg-slate-dark/60 rounded relative">
                 <div className="absolute inset-0 border-2 border-aqua rounded bg-aqua/10 z-10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div className="w-full h-full flex items-center justify-center text-aqua">
-                  Your Photo Here
+                  <img src="/unnamed (12).jpg" alt="My Image" />
                 </div>
               </div>
             </div>

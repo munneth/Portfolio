@@ -4,30 +4,30 @@ import { GraduationCap } from "lucide-react";
 
 const educationData = [
   {
-    degree: "Master of Science in Computer Science",
-    institution: "University Name",
-    date: "2020 - 2022",
-    description: "Specialized in Machine Learning and Distributed Systems. Graduated with honors.",
+    degree: "Bachelor of Science in Computer Science",
+    institution: "University of California, Davis",
+    date: "2024 - expected 2028",
+    description: "3.5 GPA, Deans List Spring Quarter 2025",
     courses: [
-      "Advanced Algorithms",
-      "Machine Learning",
-      "Distributed Systems",
+      "Data Structures and Algorithms",
+      "Object-Oriented Programming",
+      "Algorithm Design",
       "Cloud Computing"
     ]
   },
   {
-    degree: "Bachelor of Science in Computer Science",
-    institution: "University Name",
-    date: "2016 - 2020",
-    description: "Graduated with first-class honors. Active member of the programming club.",
+    degree: "Associate of Science in Social and Behavioral Sciences",
+    institution: "Yuba College",
+    date: "2020 - 2024",
+    description: "Dual Enrolled, graduated with a 3.9 GPA",
     courses: [
-      "Data Structures",
-      "Algorithms",
-      "Database Systems",
-      "Software Engineering"
+      "Introduction to Psychology",
+      "Sociology",
+      "Human Development",
+      "Cultural Anthropology"
     ]
   },
-  {
+ /* {
     degree: "High School Diploma",
     institution: "High School Name",
     date: "2012 - 2016",
@@ -38,7 +38,7 @@ const educationData = [
       "Physics",
       "Advanced Mathematics"
     ]
-  }
+  }*/
 ];
 
 const Education = () => {

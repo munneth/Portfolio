@@ -4,7 +4,7 @@ import { GraduationCap } from "lucide-react";
 
 const educationData = [
   {
-    degree: "Bachelor of Science in Computer Science",
+    degree: "Bachelor of Science in Computer Science & Engineering",
     institution: "University of California, Davis",
     date: "2024 - expected 2028",
     description: "3.5 GPA, Deans List Spring Quarter 2025",

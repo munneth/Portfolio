@@ -35,8 +35,9 @@ const Navbar = () => {
       isScrolled ? "bg-navy/90 backdrop-blur shadow-md py-3 md:py-4" : "bg-transparent"
     )}>
       <div className="container px-4 mx-auto flex justify-between items-center">
+        
         <Link to="/" className="text-coral font-mono text-xl font-semibold">
-          &lt;YourName /&gt;
+          &lt;Munneth Gill /&gt;
         </Link>
 
         {/* Desktop Navigation */}

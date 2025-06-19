@@ -4,36 +4,36 @@ import { cn } from "@/lib/utils";
 
 const experiences = [
   {
-    company: "Company One",
-    title: "Senior Software Engineer",
-    range: "January 2022 - Present",
+    company: "Youtini Entertainment",
+    title: "Software Engineer",
+    range: "January 2024 - Present",
     responsibilities: [
-      "Led development of a new client-facing application using React, TypeScript, and Node.js",
-      "Optimized application performance, reducing load time by 40%",
-      "Implemented automated testing strategies resulting in 90% code coverage",
-      "Mentored junior developers and conducted code reviews"
+      "Improved bug resolution and streamlined website deployment by effectively delegating tasks to team members",
+      "Restructured the Star Wars media database consisting of 25,000+ entries improving management",
+      "Modified web insights to reflect opportunities for expanding content reach and improving user interaction",
+      "Designed a GPT model that can directly fact check writer articles based off the Star Wars Timeline through data stored and hosted on an SQL Database, connecting through a Flask API"
     ]
   },
   {
-    company: "Company Two",
-    title: "Software Developer",
-    range: "June 2020 - December 2021",
+    company: "#Include Davis",
+    title: "Web Developer",
+    range: "February 2024 - Present",
     responsibilities: [
-      "Developed responsive web applications using React and Redux",
-      "Collaborated with UX designers to implement intuitive user interfaces",
-      "Built RESTful APIs using Node.js and Express",
-      "Participated in Agile development processes and sprint planning"
+      "Communicate with nonprofit and student organizations to gather requirements, present prototypes, and refine products based on feedback",
+      "Collaborate with a cross-functional team of UC Davis web developers and designers to deliver digital solutions using a modern tech stack including Next.js and other technologies.",
+      "Working with specific designs that are passed through multiple stages of approval and the implemented",
+      //"Participated in Agile development processes and sprint planning"
     ]
   },
   {
-    company: "Company Three",
-    title: "Junior Developer",
-    range: "January 2019 - May 2020",
+    company: "YCUSD I.T. Department",
+    title: "Intern",
+    range: "January 2023 - February 2023",
     responsibilities: [
-      "Assisted in developing front-end components using HTML, CSS, and JavaScript",
-      "Fixed bugs and improved application features",
-      "Implemented responsive designs for mobile and desktop interfaces",
-      "Participated in code reviews and testing"
+      "Resolved 20+ daily tech tickets, from phone line issues to corrupt OS files, across the school district",
+      "Partnered with web developers to deploy user-friendly front-end updates to the district website",
+      "Led a team to repair 500+ Chromebooks, showcasing leadership and efficiency in a technical support setting",
+      
     ]
   }
 ];

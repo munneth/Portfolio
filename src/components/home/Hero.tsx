@@ -39,7 +39,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="hidden lg:flex flex-1 justify-end items-center">
-          <img className="logo" src="/public/bigLogo.svg" alt="Favicon" />
+          <img className="logo" src="/bigLogo.svg" alt="Favicon" />
         </div>
       </div>
     </section>

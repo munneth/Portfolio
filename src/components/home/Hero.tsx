@@ -29,8 +29,7 @@ const Hero = () => {
             className="text-slate max-w-xl mb-12 opacity-0 animate-fade-in" 
             style={{ animationDelay: '400ms' }}
           >
-            I'm a software engineer specializing in building exceptional digital experiences.
-            Currently focused on building accessible, human-centered products.
+            I love to combine tech and finance, and build real world applications. Learning new technologies and frameworks is my passion, and I enjoy sharing my knowledge with others. Whether it's through coding, writing, or teaching, I'm always looking for ways to make a positive impact in the tech community. 
           </p>
           <div className="opacity-0 animate-fade-in" style={{ animationDelay: '500ms' }}>
             <Button asChild className="bg-transparent text-coral border border-coral hover:bg-coral/10 py-6 px-7 rounded text-base font-mono">

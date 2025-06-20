@@ -16,17 +16,17 @@ const projects = [
     description: "A web application that bypasses CAPTCHA using a combination of machine learning and computer vision. Designed a UI as well as a google chrome extension to work in the browser.",
     technologies: ["Python", "OpenCV", "TensorFlow", "Keras", "Scikit-learn"],
     github: "https://github.com/munneth/Captcha-AI-chrome-extension-AISC",
-    external: "/Beige Pastel Minimalist Thesis Defense Presentation - Presentation - Google Chrome 2025-06-19 23-38-24.mp4",
+    external: "/Untitled video - Made with Clipchamp.mp4",
     image: "/AI Demo CAPTCHA.png",
   },
-  {
+  /*{
     title: "Project Three",
     description: "A real-time chat application with private and group messaging features, built using WebSockets for instant communication.",
     technologies: ["React", "Socket.io", "Express", "MongoDB", "Redis"],
     github: "https://github.com/yourusername/project-three",
     external: "https://project-three-demo.com",
     image: "/placeholder.svg",
-  }
+  }*/
 ];
 
 const Projects = () => {

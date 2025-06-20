@@ -1,24 +1,23 @@
-
 import React from "react";
 import { cn } from "@/lib/utils";
 import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "Project One",
-    description: "A full-stack web application for managing personal finances. Features include expense tracking, budget planning, and visualization of spending habits.",
-    technologies: ["React", "Node.js", "MongoDB", "Express", "Chart.js"],
-    github: "https://github.com/yourusername/project-one",
+    title: "Find Optimal Gym Time",
+    description: "A web application for visit the UC Davis gym also called the 'ARC' at the best possible time based on scraped Occupancy Data from the ARC website.",
+    technologies: ["Next.js", "Flask", "Matplotlib", "BS4", "ShadCN"],
+    github: "https://github.com/munneth/github-Gym",
     external: "https://project-one-demo.com",
-    image: "/placeholder.svg",
+    image: "/gym-demo.png",
   },
   {
-    title: "Project Two",
-    description: "An e-commerce platform with product catalog, cart functionality, and secure payment processing using Stripe API.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL"],
-    github: "https://github.com/yourusername/project-two",
-    external: "https://project-two-demo.com",
-    image: "/placeholder.svg",
+    title: "CAPTCHA bypass",
+    description: "A web application that bypasses CAPTCHA using a combination of machine learning and computer vision. Designed a UI as well as a google chrome extension to work in the browser.",
+    technologies: ["Python", "OpenCV", "TensorFlow", "Keras", "Scikit-learn"],
+    github: "https://github.com/munneth/Captcha-AI-chrome-extension-AISC",
+    external: "/Beige Pastel Minimalist Thesis Defense Presentation - Presentation - Google Chrome 2025-06-19 23-38-24.mp4",
+    image: "/AI Demo CAPTCHA.png",
   },
   {
     title: "Project Three",
@@ -50,7 +49,8 @@ const Projects = () => {
                 "md:col-span-7 rounded overflow-hidden relative aspect-video bg-navy-light",
                 i % 2 === 1 ? "md:order-2" : ""
               )}>
-                <div className="absolute inset-0 bg-aqua/20 mix-blend-multiply"></div>
+                {/* Only apply blue tint to projects that are not the CAPTCHA project */}
+                {i !== 1 && i !== 0 && <div className="absolute inset-0 bg-aqua/20 mix-blend-multiply"></div>}
                 <img 
                   src={project.image} 
                   alt={project.title} 

@@ -5,8 +5,8 @@ const Hero = () => {
   return (
     
     <section className="min-h-[calc(100vh-80px)] flex flex-col justify-center pt-16 pb-32">
-      <div className="container px-4 mx-auto flex items-center justify-between">
-        <div className="flex-1">
+      <div className="container px-4 mx-auto flex flex-col lg:flex-row items-center justify-between">
+        <div className="flex-1 w-full lg:w-auto">
           <p 
             className="font-mono text-aqua mb-5 opacity-0 animate-fade-in" 
             style={{ animationDelay: '100ms' }}
@@ -38,8 +38,8 @@ const Hero = () => {
             </Button>
           </div>
         </div>
-        <div className="flex-1 flex justify-end items-center">
-          <img className="logo" src="/public/bigLogo.png" alt="Favicon" />
+        <div className="hidden lg:flex flex-1 justify-end items-center">
+          <img className="logo" src="/public/bigLogo.svg" alt="Favicon" />
         </div>
       </div>
     </section>

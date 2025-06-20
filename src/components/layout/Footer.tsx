@@ -26,7 +26,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="mb-4 md:mb-0 flex items-center">
             <p className="text-gold text-sm font-mono">
-              Designed & Built by YourName
+              Designed & Built by Munneth Gill
             </p>
           </div>
           

@@ -17,6 +17,10 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const navItemsToDisplay = import.meta.env.PROD
+    ? NavItems.filter(item => item.name !== "Blog")
+    : NavItems;
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -42,7 +46,7 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-1">
           <ol className="flex space-x-5 font-mono text-sm">
-            {NavItems.map((item, i) => (
+            {navItemsToDisplay.map((item, i) => (
               <li key={i} className="opacity-0 animate-fade-in" style={{ animationDelay: `${i * 100}ms`, animationFillMode: 'forwards' }}>
                 <a 
                   href={item.href} 
@@ -80,7 +84,7 @@ const Navbar = () => {
       )}>
         <nav className="flex flex-col items-center justify-center h-full">
           <ol className="flex flex-col items-center space-y-5 font-mono text-lg mb-8">
-            {NavItems.map((item, i) => (
+            {navItemsToDisplay.map((item, i) => (
               <li key={i}>
                 <a 
                   href={item.href} 

@@ -1,22 +1,21 @@
-
 import React from "react";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Instagram } from "lucide-react";
 
 const socialLinks = [
   { 
     name: "GitHub", 
     icon: <Github size={20} />, 
-    url: "https://github.com/yourusername" 
+    url: "https://github.com/munneth" 
   },
   { 
     name: "LinkedIn", 
     icon: <Linkedin size={20} />, 
-    url: "https://linkedin.com/in/yourusername" 
+    url: "https://linkedin.com/in/munnethgill" 
   },
   { 
-    name: "Twitter", 
-    icon: <Twitter size={20} />, 
-    url: "https://twitter.com/yourusername" 
+    name: "Instagram", 
+    icon: <Instagram size={20} />, 
+    url: "https://instagram.com/munneth_gill" 
   }
 ];
 

@@ -12,114 +12,53 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: "1",
-    title: "Understanding React Hooks and Their Use Cases",
-    slug: "understanding-react-hooks",
-    date: "2023-06-15",
-    excerpt: "React Hooks have revolutionized how we write React components. In this article, we'll explore the most commonly used hooks and their practical applications.",
-    tags: ["React", "JavaScript", "Web Development"],
+    title: "Building a Dog Poop detector using Ultra analytics",
+    slug: "building-a-dog-poop-detector-using-ultra-analytics",
+    date: "2025-06-20",
+    excerpt: "In this artical I'll go in depth on the first steps I've gonethrough in building my dog poop detector. This will include the system I designed to retain live video monitoring, and analytics, while I have not seen success yet there is still a lot to be learned in what I have produced so far. The work done with open cv and ultranalytics is by no means useless and still has realworld application, just not for my current situation.",
+    tags: ["Ultra analytics", "Computer Vision", "PyTorch"],
     coverImage: "/placeholder.svg",
     content: `
-# Understanding React Hooks and Their Use Cases
+# Dog Poop Detector
+## First steps
+Having a decent size backyard is amazing however it comes with its own consequences which are often having to keep it clean. Typically this issue is never too bad as raking leaves 
+is very rarely something I dread doing. However, once a week or so I embark on a journey, a treasure hunt if you will. Every week I search for the latest new spawn of this rare 
+but smelly treasure called dog poop. The poop itself is not the issue, however walking unnecasssarily for 15 minutes in the hot 120 degree California sun is not for the weak.
+After years of cleaning my dog Digits poop the old fashioned way I decided to crteate something that could save me hours of time over the courser of a year. I wanted to incorporate
+ computer visiont to show me when and where my dog Digit poops so I would know what its time to go on a treasure hunt, howver now I would have a map with a red X to mark the spot.
 
-React Hooks were introduced in React 16.8 as a way to use state and other React features without writing a class component. They've changed the way we think about and write React components.
+## Initial prototypes
 
-## useState
+### Model
+Starting out I immediatley went with a very general solution.
+Naturally I started out going straight for the fun stuff which was building the model that would be used to detect the poop.
+This model was built using Ultraanalytics and PyTorch mainly because I was somewhat familiar with the tools.
+My initial thought was to find a dataset of dogs pooping whcih suprpsing exists and use that to train a YOLO model on 
+2 classes, poop and not poop. The data set was already fairly organized and I just had to find a dataset of dogs not pooping which was as you can imagine
+fairly easy. After this it was just a matter of letting my GPU have a rip at the dataset and train the mode. I initially chose to train at 50 epochs
+which gave me around a 98% asccuracy. 
 
-The useState hook is the most basic hook in React. It allows you to add state to functional components.
+### Hardware Setup
+Now that I had a model *believe to be reliable* I needed to find a way to get it analyzing in real time. 
+My go to was our already installed EUFY security cameras especially since they had night vision. However after some 
+deep research I learned that they were very difficult to use for projects like mine and nearly impossible due to security issues,
+I found an opens ource API however it was heavily outdated and not working. Eventually after some more brainstorming I landed on an interesting 
+but working method, Raspberry Pi + Web Cam. This would work and I ended up creating a quick Flask Web Server that would broadcast the video live
+across my local network. Now that I had that situated I worked on bringing it all together.
 
-\`\`\`jsx
-import React, { useState } from 'react';
+### Bringing it together and testing
+Now that I had a solution to get video footage to analyze I just needed to link it tgether. I wrote some logic that would allow my live video to be broken down
+frame by frame and fed through my model. From there with the model overlay the frames would be put back together into the live video form. 
+This allowed me to quickly recognize what happened in the video. I also added some logic that determined if a dog was pooping or not pooping if there was a 90% confidence or more for more than 3 frames. 
+While on the surface this seemed like a good idea and all worked together. There was a sever issue.
 
-function Counter() {
-  const [count, setCount] = useState(0);
+### Issues
+The issue that we came accross was that the model was only trained on poop and not poop. This meant that if teh model came across something that neither
+it would hallucinate and would not know what to do. Often times this was still in the notpoop class however there was an overwhelming amount of false positives. 
+From here I knew that we have to go back and find a way to include more classes and option for our model. 
 
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-    </div>
-  );
-}
-\`\`\`
 
-## useEffect
 
-The useEffect hook performs side effects in functional components. It's similar to componentDidMount, componentDidUpdate, and componentWillUnmount combined.
-
-\`\`\`jsx
-import React, { useState, useEffect } from 'react';
-
-function Example() {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    document.title = \`You clicked \${count} times\`;
-    
-    return () => {
-      // Cleanup code here
-    };
-  }, [count]); // Only re-run the effect if count changes
-
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-    </div>
-  );
-}
-\`\`\`
-
-## useContext
-
-The useContext hook provides a way to pass data through the component tree without having to pass props down manually at every level.
-
-\`\`\`jsx
-import React, { useContext } from 'react';
-const ThemeContext = React.createContext('light');
-
-function ThemedButton() {
-  const theme = useContext(ThemeContext);
-  return <button className={theme}>Themed Button</button>;
-}
-\`\`\`
-
-## Custom Hooks
-
-One of the most powerful features of hooks is the ability to create your own custom hooks that encapsulate reusable logic.
-
-\`\`\`jsx
-import { useState, useEffect } from 'react';
-
-function useWindowWidth() {
-  const [width, setWidth] = useState(window.innerWidth);
-  
-  useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-  
-  return width;
-}
-
-// Usage
-function ResponsiveComponent() {
-  const width = useWindowWidth();
-  return <div>Window width: {width}</div>;
-}
-\`\`\`
-
-## Conclusion
-
-React Hooks provide a more direct API to React concepts you were already familiar with: props, state, context, refs, and lifecycle. They also offer a powerful way to reuse stateful logic between components without changing your component hierarchy.
-
-Remember that hooks can only be called at the top level of your components and cannot be conditional. This ensures that hooks are called in the same order each time a component renders.
     `
   },
   {

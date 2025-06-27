@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { blogPosts } from "../data/blogPosts";
@@ -30,6 +29,9 @@ const BlogPost = () => {
   }
 
   const formattedDate = format(new Date(post.date), 'MMMM d, yyyy');
+
+  // Debug image path
+  console.log('Image path:', post.coverImage);
 
   return (
     <Layout>
@@ -73,6 +75,13 @@ const BlogPost = () => {
                 src={post.coverImage} 
                 alt={post.title}
                 className="w-full h-full object-cover"
+                onError={(e) => {
+                  console.error('Image failed to load:', post.coverImage);
+                  e.currentTarget.src = '/placeholder.svg';
+                }}
+                onLoad={() => {
+                  console.log('Image loaded successfully:', post.coverImage);
+                }}
               />
             </div>
           </header>
@@ -80,7 +89,7 @@ const BlogPost = () => {
           <Separator className="my-10 bg-slate-dark" />
 
           {/* Article content */}
-          <div className="max-w-3xl mx-auto prose prose-invert prose-headings:text-slate-light prose-a:text-aqua">
+          <div className="max-w-3xl mx-auto prose prose-invert prose-headings:text-slate-light prose-h1:text-3xl prose-h1:font-bold prose-h2:text-2xl prose-h2:font-bold prose-h3:text-xl prose-h3:font-bold prose-p:text-slate prose-a:text-aqua prose-a:no-underline hover:prose-a:underline prose-strong:text-slate-light prose-code:text-aqua prose-code:bg-navy-light prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-pre:bg-navy-light prose-pre:border prose-pre:border-slate-dark">
             <ReactMarkdown>
               {post.content}
             </ReactMarkdown>

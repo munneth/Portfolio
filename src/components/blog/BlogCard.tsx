@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -23,6 +22,9 @@ interface BlogCardProps {
 const BlogCard = ({ post, featured = false }: BlogCardProps) => {
   const formattedDate = format(new Date(post.date), 'MMMM d, yyyy');
   
+  // Debug image path
+  console.log('BlogCard image path:', post.coverImage || '/placeholder.svg');
+  
   return (
     <Link 
       to={`/blog/${post.slug}`} 
@@ -42,6 +44,13 @@ const BlogCard = ({ post, featured = false }: BlogCardProps) => {
           src={post.coverImage || '/placeholder.svg'} 
           alt={post.title} 
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          onError={(e) => {
+            console.error('BlogCard image failed to load:', post.coverImage);
+            e.currentTarget.src = '/placeholder.svg';
+          }}
+          onLoad={() => {
+            console.log('BlogCard image loaded successfully:', post.coverImage);
+          }}
         />
       </div>
       

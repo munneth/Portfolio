@@ -63,14 +63,14 @@ From here I knew that we have to go back and find a way to include more classes 
   },
   {
     id: "2",
-    title: "Building a RESTful API with Node.js and Express",
-    slug: "building-restful-api-nodejs",
-    date: "2023-08-22",
-    excerpt: "Learn how to create a simple but powerful RESTful API using Node.js and Express, with MongoDB as the database.",
-    tags: ["Node.js", "Express", "MongoDB", "API"],
+    title: "Building a webapp to track your wardrobe",
+    slug: "building-webapp-track-wardrobe",
+    date: "2025-07-1", 
+    excerpt: "Find out how to build a webapp to track your wardrobe, including features like outfit planning, clothing inventory, and style recommendations.",
+    tags: ["Next.js", "Supabase", "Firebase", "API"],
     coverImage: "/placeholder.svg",
     content: `
-# Building a RESTful API with Node.js and Express
+# Building a webapp to track your wardrobe
 
 In this tutorial, we'll walk through creating a RESTful API using Node.js and Express.
 

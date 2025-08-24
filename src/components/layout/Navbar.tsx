@@ -10,22 +10,20 @@ const NavItems = [
   { name: "Education", href: "#education" },
   { name: "Projects", href: "#projects" },
   { name: "Blog", href: "/blog" },
-  { name: "Contact", href: "#contact" }
+  { name: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navItemsToDisplay = import.meta.env.PROD
-    ? NavItems.filter(item => item.name !== "Blog")
-    : NavItems;
+  const navItemsToDisplay = NavItems;
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-    
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -33,12 +31,15 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className={cn(
-      "fixed top-0 w-full z-50 transition-all duration-300 ease-in-out py-4 md:py-6",
-      isScrolled ? "bg-navy/90 backdrop-blur shadow-md py-3 md:py-4" : "bg-transparent"
-    )}>
+    <header
+      className={cn(
+        "fixed top-0 w-full z-50 transition-all duration-300 ease-in-out py-4 md:py-6",
+        isScrolled
+          ? "bg-navy/90 backdrop-blur shadow-md py-3 md:py-4"
+          : "bg-transparent"
+      )}
+    >
       <div className="container px-4 mx-auto flex justify-between items-center">
-        
         <Link to="/" className="text-coral font-mono text-xl font-semibold">
           &lt;Munneth Gill /&gt;
         </Link>
@@ -47,19 +48,32 @@ const Navbar = () => {
         <nav className="hidden md:flex items-center space-x-1">
           <ol className="flex space-x-5 font-mono text-sm">
             {navItemsToDisplay.map((item, i) => (
-              <li key={i} className="opacity-0 animate-fade-in" style={{ animationDelay: `${i * 100}ms`, animationFillMode: 'forwards' }}>
-                <a 
-                  href={item.href} 
+              <li
+                key={i}
+                className="opacity-0 animate-fade-in"
+                style={{
+                  animationDelay: `${i * 100}ms`,
+                  animationFillMode: "forwards",
+                }}
+              >
+                <a
+                  href={item.href}
                   className="text-slate hover:text-coral flex items-center py-1 px-2 transition"
                 >
-                  <span className="text-coral mr-1">0{i+1}.</span>
+                  <span className="text-coral mr-1">0{i + 1}.</span>
                   {item.name}
                 </a>
               </li>
             ))}
           </ol>
-          <div className="ml-4 opacity-0 animate-fade-in" style={{ animationDelay: '600ms', animationFillMode: 'forwards' }}>
-            <Button asChild className="bg-transparent text-coral border border-coral hover:bg-coral/10 rounded">
+          <div
+            className="ml-4 opacity-0 animate-fade-in"
+            style={{ animationDelay: "600ms", animationFillMode: "forwards" }}
+          >
+            <Button
+              asChild
+              className="bg-transparent text-coral border border-coral hover:bg-coral/10 rounded"
+            >
               <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
                 Resume
               </a>
@@ -68,7 +82,7 @@ const Navbar = () => {
         </nav>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="md:hidden text-coral hover:text-coral-light p-1"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle Menu"
@@ -78,26 +92,31 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className={cn(
-        "fixed inset-0 w-full h-screen bg-navy/90 backdrop-blur transform transition-all ease-in-out duration-300 flex items-center justify-center md:hidden",
-        isMenuOpen ? "translate-x-0" : "translate-x-full"
-      )}>
+      <div
+        className={cn(
+          "fixed inset-0 w-full h-screen bg-navy/90 backdrop-blur transform transition-all ease-in-out duration-300 flex items-center justify-center md:hidden",
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        )}
+      >
         <nav className="flex flex-col items-center justify-center h-full">
           <ol className="flex flex-col items-center space-y-5 font-mono text-lg mb-8">
             {navItemsToDisplay.map((item, i) => (
               <li key={i}>
-                <a 
-                  href={item.href} 
+                <a
+                  href={item.href}
                   className="text-slate-light hover:text-coral flex flex-col items-center py-2 transition"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <span className="text-coral text-sm mb-1">0{i+1}.</span>
+                  <span className="text-coral text-sm mb-1">0{i + 1}.</span>
                   {item.name}
                 </a>
               </li>
             ))}
           </ol>
-          <Button asChild className="bg-transparent text-coral border border-coral hover:bg-coral/10 rounded">
+          <Button
+            asChild
+            className="bg-transparent text-coral border border-coral hover:bg-coral/10 rounded"
+          >
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
               Resume
             </a>

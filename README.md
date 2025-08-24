@@ -1,73 +1,113 @@
-# Welcome to your Lovable project
+# Munneth Gill - Portfolio
 
-## Project info
+A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/72a1f2dc-2438-47a5-ad6f-244beddc01f2
+## 🚀 Features
 
-## How can I edit this code?
+- **Modern Design**: Clean and professional portfolio layout
+- **Responsive**: Works perfectly on all devices
+- **Dark/Light Mode**: Built-in theme support
+- **Fast Performance**: Optimized with Vite
+- **SEO Friendly**: Proper meta tags and structure
 
-There are several ways of editing your application.
+## 🛠️ Tech Stack
 
-**Use Lovable**
+- **Frontend**: React 18, TypeScript
+- **Styling**: Tailwind CSS, shadcn/ui components
+- **Build Tool**: Vite
+- **Routing**: React Router DOM
+- **Icons**: Lucide React
+- **Deployment**: Vercel
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/72a1f2dc-2438-47a5-ad6f-244beddc01f2) and start prompting.
+## 📁 Project Structure
 
-Changes made via Lovable will be committed automatically to this repo.
+```
+src/
+├── components/          # Reusable UI components
+│   ├── home/           # Home page components
+│   ├── layout/         # Layout components (Navbar, Footer)
+│   └── ui/             # shadcn/ui components
+├── pages/              # Page components
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+└── data/               # Static data and content
+```
 
-**Use your preferred IDE**
+## 🚀 Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js (v16 or higher)
+- npm or yarn
 
-Follow these steps:
+### Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. Clone the repository:
+```bash
+git clone <your-repo-url>
+cd Portfolio
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Install dependencies:
+```bash
+npm install
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open [http://localhost:8080](http://localhost:8080) in your browser.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📝 Available Scripts
 
-**Use GitHub Codespaces**
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🎨 Customization
 
-## What technologies are used for this project?
+### Adding New Pages
 
-This project is built with:
+1. Create a new component in `src/pages/`
+2. Add the route in `src/App.tsx`
+3. Update navigation if needed
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Styling
 
-## How can I deploy this project?
+The project uses Tailwind CSS with custom configuration. You can:
+- Modify `tailwind.config.ts` for theme changes
+- Add custom components in `src/components/ui/`
+- Update global styles in `src/index.css`
 
-Simply open [Lovable](https://lovable.dev/projects/72a1f2dc-2438-47a5-ad6f-244beddc01f2) and click on Share -> Publish.
+## 📱 Pages
 
-## Can I connect a custom domain to my Lovable project?
+- **Home** (`/`) - Main portfolio page with sections
+- **Resume** (`/resume`) - Professional resume
+- **Privacy Policy** (`/privacy-policy`) - Privacy policy page
+- **Blog** (`/blog`) - Blog section (development only)
 
-Yes, you can!
+## 🌐 Deployment
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+The project is configured for deployment on Vercel:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+1. Connect your GitHub repository to Vercel
+2. Vercel will automatically detect the Vite configuration
+3. Deploy with zero configuration
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 📞 Contact
+
+- **Email**: munnethgill@gmail.com
+- **Website**: https://munnethgill.live
+- **LinkedIn**: [Your LinkedIn]
+- **GitHub**: [Your GitHub]
+
+---
+
+Built with ❤️ by Munneth Gill
